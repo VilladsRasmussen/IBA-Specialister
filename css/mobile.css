@@ -38,20 +38,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 42px;
+}
+
+header > div > div {
+    display: flex;
+    gap: 15px;
+    align-items: center;    
 }
 
 .par-knapper { /* Knapperne skal være lige for hinanden */
     display: flex;
-    justify-content: center;
-    flex-direction: row;
     gap: 42px;
-    padding-left: 42px;
-    padding-right: 42px;
-}
-
-#logo-header { /* Nemmere måde at centrerer billedet? */
-    padding-top: 17px;
-    padding-bottom: 17px;
 }
 
 .menu-knap {
@@ -128,7 +126,11 @@ section {
 }
 
 .program-ikon {
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/1; /*Billederne er ikke 1/1 */
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    object-fit: contain;
 }
 
 .programmer {
@@ -144,12 +146,11 @@ section {
 .programmer-showcase {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     grid-row: 3/4;
     grid-column: 2/4;
-    gap: 20px;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .se-mere {
@@ -159,7 +160,7 @@ section {
     height: 57px;
     display: flex;
     align-items: center;
-    padding-left: 2%;
+    padding-left: 10%;
     padding-right: 2%;
     font-size: 32px;
     gap: 20px;
@@ -168,5 +169,6 @@ section {
 }
 
 .individuel-program {
-    justify-content: center;
+    text-align: center;
+    font-size: 24px;
 }
