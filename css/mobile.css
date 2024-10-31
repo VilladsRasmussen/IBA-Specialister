@@ -127,8 +127,46 @@ section {
     display: grid;
 }
 
-.programmer {
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(5, 1fr);
+.program-ikon {
+    aspect-ratio: 1/1;
 }
 
+.programmer {
+    grid-template-rows: 10% 10% 50% 10% 50%;
+    grid-template-columns: 10% 22% 1fr 10%;
+}
+
+.sektion-overskrift {
+    grid-row: 2/3;
+    grid-column: 2/4;
+}
+
+.programmer-showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-row: 3/4;
+    grid-column: 2/4;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.se-mere {
+    background-color: #DBB630;
+    color: black;
+    border-radius: 45px;
+    height: 57px;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 32px;
+    gap: 20px;
+    grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.individuel-program {
+    justify-content: center;
+}
