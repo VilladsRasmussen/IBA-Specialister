@@ -1,0 +1,16 @@
+* {
+    font-family: Calibri, Helvetica, sans-serif;
+}
+
+.color1 {
+    background-color: #10164A;
+}
+
+.color2 {
+    background-color: #DBB630;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+}
