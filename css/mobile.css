@@ -29,6 +29,10 @@ h5 {
     font-size: 24px;
 }
 
+#grey-background {
+    background-color: #c3c3c3;
+}
+
 /* Header CSS */
 
 header {
@@ -41,134 +45,28 @@ header {
     padding: 0 42px;
 }
 
-header > div > div {
-    display: flex;
-    gap: 15px;
-    align-items: center;    
-}
-
 .par-knapper { /* Knapperne skal være lige for hinanden */
     display: flex;
     gap: 42px;
+    width: 25%;
 }
 
 .menu-knap {
     color: white;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.knapper-right {
+    justify-content: flex-end;
+}
+
+#logo-header {
+    display: flex;
+    justify-content: center;
 }
 
 /* Hero CSS */
 
-.hero {
-    background-image: url("../img/20240905_104722.jpg");
-    height: 566px;
-    display: grid;
-    color: white;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.image-overlay {
-    display: grid;
-    background-color: rgba(0, 0, 0, 0.8);
-    grid-area: 1/1/5/6;
-}
-
-.text-hero {
-    grid-area: 2/2/4/3;
-}
-
-.søgefelt {
-    grid-area: 4/2/5/3;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
-}
-
-.søgefelt > i {
-    font-size: 42px;
-}
-
-.søgefelt-hvid {
-    max-width: 100%;
-    height: 57px;
-    background-color: white;
-    border-radius: 45px;
-    display: flex;
-    align-items: center;
-    padding-left: 2%;
-    padding-right: 10%
-}
-.grey {
-    color: grey;
-}
-
-.søg-nu {
-    background-color: #DBB630;
-    color: black;
-    border-radius: 45px;
-    height: 57px;
-    display: flex;
-    align-items: center;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-
-/* Sektioner CSS */
-
-#grey-background {
-    background-color: #c3c3c3;
-}
-
-section {
-    display: grid;
-}
-
-.program-ikon {
-    aspect-ratio: 1/1; /*Billederne er ikke 1/1 */
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    object-fit: contain;
-}
-
-.programmer {
-    grid-template-rows: 10% 10% 50% 10% 50%;
-    grid-template-columns: 10% 22% 1fr 10%;
-}
-
-.sektion-overskrift {
-    grid-row: 2/3;
-    grid-column: 2/4;
-}
-
-.programmer-showcase {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    grid-row: 3/4;
-    grid-column: 2/4;
-    padding-top: 20px;
-    padding-bottom: 60px;
-}
-
-.se-mere {
-    background-color: #DBB630;
-    color: black;
-    border-radius: 45px;
-    height: 57px;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
-    padding-right: 2%;
-    font-size: 32px;
-    gap: 20px;
-    grid-column: 2/3;
-    grid-row: 4/5;
-}
-
-.individuel-program {
-    text-align: center;
-    font-size: 24px;
-}
