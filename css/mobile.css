@@ -4,6 +4,12 @@
     font-family: 'Calibri', 'Helvatica', sans-serif;
 }
 
+main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #c3c3c3;
+}
+
 img {
     width: 100%;
     height: 100%;
@@ -29,8 +35,27 @@ h5 {
     font-size: 24px;
 }
 
-#grey-background {
-    background-color: #c3c3c3;
+a {
+    text-decoration: none;
+}
+
+.stor-cta-knap > p {
+    font-size: 40px;    
+}
+
+.stor-cta-knap > i {
+    font-size: 40px;    
+}
+
+.stor-cta-knap {
+    background-color: #DBB630;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 2% 5%;
+    border-radius: 20px;
+    color: black;
 }
 
 /* Header CSS */
@@ -57,6 +82,7 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
 }
 
 .knapper-right {
@@ -70,3 +96,89 @@ header {
 
 /* Hero CSS */
 
+.hero {
+    background-image: url("../img/20240905_104722.jpg");
+    height: 566px;
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.image-overlay {
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.8);
+    grid-row: 1/6;
+    grid-column: 1/5;
+}
+
+.hero-overskrift {
+    grid-row: 2/3;
+    grid-column: 2/5;
+}
+
+.hero-overskrift > p {
+    font-size: 32px;    
+}
+
+.hero-knapper {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+/* Programmer Sektion */
+
+.programmer-sektion {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
+}
+
+.programmer-sektion h2 {
+    grid-row: 2/3;
+    grid-column: 2/4;
+}
+
+.individuel-program img {
+    aspect-ratio: 1/1; /*  Billederne er ikke 1/1 */
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    object-fit: contain;
+    height: auto;
+    width: 200px;
+}
+
+.individuel-program p {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    color: black
+}
+
+.programmer-showcase {
+    display: flex;
+    gap: 30px;
+    grid-row: 4/5;
+    grid-column: 2/4;
+    justify-content: space-evenly;
+}
+
+.cta-knap-programmer {
+    display: flex;
+    grid-row: 6/7;
+    grid-column: 2/3;
+}
+
+/* Specialister Sektion */
+
+.specialister-sektion {
+    display: grid;
+    grid-template-rows: 1fr 6fr 2fr;
+    grid-template-columns: 1fr 3fr 9fr 1fr;
+    gap: 20px; 
+}
