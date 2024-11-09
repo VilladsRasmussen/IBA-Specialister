@@ -5,7 +5,7 @@
     font-weight: normal;
 }
 
-main {
+.stor-margin {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #c3c3c3;
@@ -13,12 +13,15 @@ main {
     padding-right: 10%;
 }
 
-section {
-    margin: 40px 0;
+.mellem-margin {
+    background-color: #c3c3c3;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 h1 {
     font-size: 64px;
+    font-weight: bold;
 }
 
 h2 {
@@ -150,18 +153,11 @@ header {
     padding: 50px 10%;
 }
 
-.hero-overskrift {
-    grid-row: 2/3;
-    grid-column: 2/5;
-}
-
 .hero-overskrift > p {
     font-size: 32px;    
 }
 
 .hero-knapper {
-    grid-row: 3/4;
-    grid-column: 2/3;
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -172,7 +168,8 @@ header {
 /* Programmer Sektion */
 
 .programmer-sektion {
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 5%;
 }
 
 .programmer-sektion h2 {
@@ -188,7 +185,7 @@ header {
 }
 
 .individuel-program img {
-    aspect-ratio: 1/1; /*  Billederne er ikke 1/1 */
+    aspect-ratio: 1/1;
     background-color: white;
     padding: 20px;
     border-radius: 20px;
@@ -214,6 +211,10 @@ header {
 .specialister-sektion h2 {
     margin-bottom: 3%;
     font-weight: bold;
+}
+
+.specialister-sektion {
+    margin-bottom: 5%;
 }
 
 .specialister-showcase {
@@ -252,7 +253,7 @@ header {
 .medarbejder {
     border-radius: 1px;
     border: 2px solid black;
-    aspect-ratio: 1/1; /*  Billederne er ikke 1/1 */
+    aspect-ratio: 1/1; 
     background-color: white;
     border-radius: 100px;
     object-fit: cover;
@@ -268,7 +269,7 @@ header {
 }
 
 .individuel-program-mellem img {
-    aspect-ratio: 1/1; /*  Billederne er ikke 1/1 */
+    aspect-ratio: 1/1; 
     background-color: white;
     padding: 15px;
     border-radius: 20px;
@@ -303,7 +304,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 50px 10%;
+    padding: 50px 5%;
     color: white;
 }
 
@@ -327,7 +328,7 @@ footer a {
     gap: 12px
 }
 
-/* --------------- ALLE PROGRAMMER SIDE --------------- */
+/* --------------- ALLE PROGRAMMER / SPECIALISTER SIDE --------------- */
 
 .manglende-programmer-sektion {
     padding: 50px 10%;
@@ -352,6 +353,138 @@ footer a {
     font-size: 20px;
 }
 
+/* --------------- PROGRAM SIDE --------------- */
+
+/* Program Hero */
+
+.program-logo {
+    aspect-ratio: 1/1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    object-fit: contain;
+    height: auto;
+    width: 250px;
+    text-decoration: none;
+    margin-bottom: 3%;
+}
+
+.program-hero {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 100%;
+    padding: 3% 5%;
+}
+
+.billede-og-info {
+    display: flex;
+    gap: 5%;
+}
+
+.billede-og-info p {
+    font-size: 24px;
+}
+
+.sektion-genveje {
+    display: flex;
+    gap: 3%;
+}
+
+/* Side Indhold */
+
+.side-indhold {
+    padding: 3% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-indhold h2, h5 {
+    font-weight: bold;
+}
+
+.side-indhold h2, h4, p {
+    margin-bottom: 1%;
+}
+
+.side-indhold h5 {
+    margin-bottom: 5%;
+}
+
+.side-indhold p {
+    font-size: 20px;
+}
+
+.venstre-indhold {
+    width: 200%;
+    padding-right: 5%;
+}
+
+.video-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.individ-videoguide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+iframe {
+    margin-bottom: 2%;
+    border-radius: 20px;
+    width: 448px;
+    height: 252px; 
+}
+
+article {
+    margin-bottom: 4%;
+    background-color: #D9D9D9;
+    padding: 7%;
+    border: 2px solid black;
+}
+
+li {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Specialister i program */
+
+.hjælp-specialister {
+    padding-bottom: 5%;
+}
+
+.hjælp-specialister h2 {
+    margin-bottom: 1%;
+    font-weight: bold;
+}
+
+.specifikke-specialister {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2%;
+}
+
+.mini-specialist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    text-align: center;
+    background-color: #D9D9D9;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.mini-specialist h3 {
+    font-weight: bold;
+}
+
+.mini-specialist p {
+    font-size: 28px;;
+}
 
 
 /* Media query for smaller screens */
@@ -449,6 +582,10 @@ footer a {
         margin-top: 15%
     }
 
+    footer {
+        padding: 10%;
+    }
+
 
 /* ALLE PROGRAMMER SIDE */ 
 
@@ -459,6 +596,67 @@ footer a {
     .mangler-du {
         width: 100%;
         padding: 10%;
+    }
+
+/* PROGRAM SIDE */
+
+    .program-hero {
+        padding: 6%;
+    }
+
+    .billede-og-info {
+        flex-direction: column-reverse;
+    }
+
+    .program-logo {
+        width: 150px;
+    }
+
+    .sektion-genveje {
+        flex-direction: column;
+        width: 75%;
+    }
+
+    .forced-margin {
+        margin-bottom: 8%;
+    }
+
+    .side-indhold {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .beskrivelse {
+        padding: 4%;
+    }
+
+    .videoguides {
+        padding: 4%;
+    }
+
+    .individ-videoguide {
+        align-items: flex-start;
+    }
+
+    iframe {
+        aspect-ratio: 16/9;
+        width: auto;
+        height: auto; 
+    }
+
+    .specifikke-specialister {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mini-specialist {
+        width: 100%;
+        padding: 10% 5%;
+        margin-bottom: 8%;
+    }
+
+    .hjælp-specialister h2 {
+        margin-bottom: 7%;;
     }
 
 }
