@@ -19,6 +19,10 @@
     padding-right: 5%;
 }
 
+main {
+    padding-bottom: 3%;
+}
+
 h1 {
     font-size: 64px;
     font-weight: bold;
@@ -26,6 +30,7 @@ h1 {
 
 h2 {
     font-size: 48px;
+    font-weight: bold;
 }
 
 h3 {
@@ -42,6 +47,10 @@ h5 {
 
 h6 {
     font-size: 20px;
+}
+
+a:hover {
+    box-shadow: 0 0 0 2px black;
 }
 
 .divider {
@@ -70,7 +79,7 @@ h6 {
 }
 
 .stor-cta-knap > p {
-    font-size: 40px;    
+    font-size: 40px !important;   
 }
 
 .stor-cta-knap > i {
@@ -90,7 +99,7 @@ h6 {
 }
 
 .mellem-cta-knap > p {
-    font-size: 32px;    
+    font-size: 32px !important;    
 }
 
 .mellem-cta-knap > i {
@@ -170,6 +179,9 @@ header {
 .programmer-sektion {
     margin-top: 20px;
     margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .programmer-sektion h2 {
@@ -179,9 +191,13 @@ header {
 
 .programmer-showcase {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 5%;
     flex-wrap: wrap;
+}
+
+.negative-margin {
+    margin-bottom: -5%;
 }
 
 .individuel-program img {
@@ -209,7 +225,7 @@ header {
 /* Specialister Sektion */
 
 .specialister-sektion h2 {
-    margin-bottom: 3%;
+    margin: 2% 0 3% 0;
     font-weight: bold;
 }
 
@@ -309,11 +325,11 @@ footer {
 }
 
 footer p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 footer a {
-    font-size: 20px;
+    font-size: 24px;
     color: white;
 }
 
@@ -325,7 +341,7 @@ footer a {
 .left-footer {
     display: flex;
     flex-direction: column;
-    gap: 12px
+    gap: 12px;
 }
 
 /* --------------- ALLE PROGRAMMER / SPECIALISTER SIDE --------------- */
@@ -353,9 +369,9 @@ footer a {
     font-size: 20px;
 }
 
-/* --------------- PROGRAM SIDE --------------- */
+/* --------------- PROGRAM / SPECIALIST SIDER --------------- */
 
-/* Program Hero */
+/* 1. Alt - Program Hero */
 
 .program-logo {
     aspect-ratio: 1/1;
@@ -390,6 +406,25 @@ footer a {
     gap: 3%;
 }
 
+/* 2. Alt - Specialist Hero */
+
+.stor-medarbejder {
+    border: 2px solid black;
+    aspect-ratio: 1/1; 
+    background-color: white;
+    border-radius: 175px;
+    object-fit: cover;
+    height: auto;
+    width: 350px;
+}
+
+.specialist-hero {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 100%;
+    padding: 3% 5%;
+}
+
 /* Side Indhold */
 
 .side-indhold {
@@ -411,7 +446,7 @@ footer a {
 }
 
 .side-indhold p {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .venstre-indhold {
@@ -450,6 +485,57 @@ li {
     font-weight: bold;
 }
 
+/* 2. Alt - Specialister Side Info */
+
+.venstre-indhold-specialister {
+    width: 130%;
+    padding-right: 5%;
+}
+
+.guide-liste {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 3%;
+}
+
+.specialist-guide {
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 2%;
+}
+
+.text-left h5 {
+    margin-bottom: -1px;
+}
+
+.knap-og-logo img {
+    aspect-ratio: 1/1;
+    background-color: white;
+    padding: 7px;
+    border-radius: 20px;
+    object-fit: contain;
+    height: auto;
+    width: 75px;
+    text-decoration: none;
+}
+
+.knap-og-logo {
+    display: flex;
+    gap: 20px;
+}
+
+.gode-programmer {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10%;
+}
+
 /* Specialister i program */
 
 .hjælp-specialister {
@@ -486,12 +572,47 @@ li {
     font-size: 28px;;
 }
 
+/* Online kursus */
+
+.online-kursus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 75%;
+    height: auto;
+    padding: 2%;
+    border-radius: 30px;
+    border: 2px solid black;
+    background: linear-gradient(to right, #D9D9D9 0%, #D9D9D9 45%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%),
+                url('../img/AI\ Kursus\ billede.jpg') right center / cover no-repeat;
+}
+
+.kursus-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.kursus-info p {
+    font-size: 24px;
+}
+
+.kursus-info h5 {
+    margin-bottom: 10%;
+}
+
+.kursus-programmer {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 10%;;
+}
+
 
 /* Media query for smaller screens */
 @media (max-width: 800px) {
 
     * {
-        max-width: 100vw;
+        max-width: 100%;
     }
 
     body {
@@ -545,6 +666,10 @@ li {
         margin-bottom: 7%;
     }
 
+    .negative-margin {
+        margin-bottom: -10%;
+    }
+
     .individuel-program img {
         width: 150px;
     }
@@ -562,6 +687,7 @@ li {
 
     .specialister-sektion h2 {
         text-align: center;
+        margin: 3% 0 8% 0;
     }
 
     .specialister-showcase {
@@ -584,6 +710,7 @@ li {
 
     footer {
         padding: 10%;
+        padding-bottom: -1%;
     }
 
 
@@ -623,11 +750,7 @@ li {
 
     .side-indhold {
         flex-direction: column;
-        width: auto;
-    }
-
-    .beskrivelse {
-        padding: 4%;
+        width: 100%;
     }
 
     .videoguides {
@@ -657,6 +780,42 @@ li {
 
     .hjælp-specialister h2 {
         margin-bottom: 7%;;
+    }
+
+    .stor-medarbejder {
+        width: 250px;
+        margin: 5% 0;
+    }
+
+    .specialist-guide {
+        padding: 3% 6%;
+        flex-direction: column;
+    }
+    
+    .knap-og-logo {
+        justify-content: center;
+        margin-top: 4%;        
+    }
+
+    .knap-og-logo img {
+        width: 65px;
+        height: 100%;
+    }
+
+    .gode-programmer {
+        margin-top: 10%;
+    }
+
+    .online-kursus {
+        max-width: 100%;
+        padding: 5%;
+        margin-bottom: 10%;
+        background: linear-gradient(to bottom, #D9D9D9 0%, #D9D9D9 68%, rgba(255, 255, 255, 0) 80%, rgba(255, 255, 255, 0) 100%),
+                    url('../img/bottom-3.jpg') center bottom / cover no-repeat;
+    }
+
+    .kursus-info {
+        margin-bottom: 70%;
     }
 
 }
