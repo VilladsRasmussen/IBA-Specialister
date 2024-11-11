@@ -480,6 +480,10 @@ article {
     border: 2px solid black;
 }
 
+article a:visited {
+    color: purple;
+}
+
 li {
     font-size: 20px;
     font-weight: bold;
