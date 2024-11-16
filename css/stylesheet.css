@@ -764,6 +764,10 @@ li {
     padding-bottom: 2%;
 }
 
+.kursuser h2 {
+    margin-bottom: 1%;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 800px) {
 
