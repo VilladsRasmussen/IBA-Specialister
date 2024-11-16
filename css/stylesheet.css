@@ -135,7 +135,12 @@ menu a:hover {
 
 /* Header CSS */
 
+.content-wrapper {
+    padding-top: 100px; /* Same as header height */
+}
+
 header {
+    position: fixed;
     background-color: #10164A;
     max-width: 100%;
     width: 100%;
@@ -144,6 +149,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 42px;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .par-knapper { /* Knapperne skal være lige for hinanden */
@@ -179,14 +187,13 @@ header {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
-    z-index: 998;
+    z-index: 996;
     pointer-events: none;
     transition: background-color 0.3s ease, pointer-events 0.3s ease;
 }
 
 .overlay.active {
     background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
     pointer-events: all;
 }
 
@@ -281,7 +288,7 @@ menu img {
 }
 
 .hero-knapper a:hover {
-    box-shadow: white 0px 0px 0px 2px;
+    box-shadow: white 0px 0px 0px 2px !important;
 }
 
 /* Programmer Sektion */
@@ -750,16 +757,16 @@ li {
         display: none;
     }
 
-    #house {
-        display: none;
-    }
-
     header i {
         font-size: 40px;
     }
 
     header {
         padding: 0 24px;
+    }
+
+    .par-knapper {
+        gap: 24px;
     }
 
 
@@ -968,4 +975,5 @@ menu img {
     }
 
 }
+
 

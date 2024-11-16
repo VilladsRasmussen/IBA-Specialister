@@ -6,12 +6,15 @@
     <title>IBA Specialister</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://kit.fontawesome.com/c9d62a50e6.js" crossorigin="anonymous"></script>
+    <script src="js/javascript.js" defer></script> <!-- Loader efter HTML'en er loaded -->
 </head>
 <body>
     
-    <header>
+    <div class="overlay"></div>
+
+    <header class="sticky-header">
         <nav class="par-knapper">
-            <a href="#" class="menu-knap"> 
+            <a href="#menu" class="menu-knap"> 
                 <p class="header-text">Menu</p>
                 <i class="fa-solid fa-bars"></i>
             </a>
@@ -32,6 +35,29 @@
             </a>
         </nav>
     </header>
+
+    <menu id="menu">
+        <a href="javascript:history.back()">
+            <i class="fa-solid fa-x"></i>
+        </a>
+        <img src="img/IBA Specialister.png" alt="Billede af et logo med navn IBA Specialister">
+        <br>
+        <ul class="menu-liste">
+            <li>
+                <a href="error.html">Log Ind</a>
+            </li>
+            <li>
+                <a href="alle-programmer.html">Programmer</a>
+            </li>
+            <li>
+                <a href="alle-specialister.html">Specialister</a>
+            </li>
+            <li>
+                <a href="alle-kursuer.html">Kursuser</a>
+            </li>
+    </menu>
+
+    <div class="content-wrapper"></div>
 
 <main class="stor-margin">
 
