@@ -6,14 +6,17 @@
     <title>IBA Specialister</title>
     <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://kit.fontawesome.com/c9d62a50e6.js" crossorigin="anonymous"></script>
+    <script src="js/javascript.js" defer></script> <!-- Loader efter HTML'en er loaded -->
 </head>
 <body>
+
+<div class="overlay"></div>
 
 <!-- Header -->
 
 <header>
     <nav class="par-knapper">
-        <a href="#" class="menu-knap"> 
+        <a href="#menu" class="menu-knap"> 
             <p class="header-text">Menu</p>
             <i class="fa-solid fa-bars"></i>
         </a>
@@ -33,7 +36,30 @@
             <i class="fa-regular fa-user"></i>
         </a>
     </nav>
+
+    <menu id="menu">
+        <a href="javascript:history.back()">
+            <i class="fa-solid fa-x"></i>
+        </a>
+        <img src="img/IBA Specialister.png" alt="Billede af et logo med navn IBA Specialister">
+        <br>
+        <ul class="menu-liste">
+            <li>
+                <a href="error.html">Log Ind</a>
+            </li>
+            <li>
+                <a href="alle-programmer.html">Programmer</a>
+            </li>
+            <li>
+                <a href="alle-specialister.html">Specialister</a>
+            </li>
+            <li>
+                <a href="alle-specialister.html">Kursuser</a>
+            </li>
+    </menu>
 </header>
+
+
 
 <!-- Hero -->
 <section class="hero">
@@ -140,22 +166,14 @@
             </a>
         </article>
         <article class="individuel-specialist">
-            <img class="medarbejder" src="img/medarbejdere/niels_joorgen.jpg" alt="Niels-Jørgen B. Madsen">
-            <h3 class="strong">Niels-Jørgen B. Madsen</h3>
-            <p>Studievejleder</p>
+            <img class="medarbejder" src="img/medarbejdere/allan-fledelius.jpg" alt="Allan Fledelius">
+            <h3 class="strong">Allan Fledelius</h3>
+            <p>Marketing</p>
             <p class="strong">Han bruger:</p>
             <div class="programmer-for-specialister">
                 <a href="#" class="individuel-program-mellem">
-                    <figure>
-                        <img src="img/programmer/Microsoft_Office_Teams_Logo_512px.png" alt="Teams">
-                        <figcaption>Teams</figcaption>
-                    </figure>
-                </a>
-                <a href="#" class="individuel-program-mellem">
-                    <figure>
-                        <img src="img/programmer/Microsoft_Office_Outlook_Logo_512px.png" alt="Outlook">
-                        <figcaption>Outlook</figcaption>
-                    </figure>
+                    <img src="img/programmer/Microsoft_Office_Word_(2019–present).svg.png" alt="Word">
+                    <p>Word</p>
                 </a>
             </div>
             <a href="#" class="mellem-cta-knap">
@@ -210,17 +228,17 @@
                 <p>
                 Email:
                 <br>specialister@iba.dk
-            </p>
+                </p>
             <br>
-            <p>
+                <p>
                 Telefonnummer:
                 <br>+45 12 34 56 78
-            </p>
+                </p>
             <br>
-            <p>
+                <p>
                 Adresse:
                 <br>Havneparken 1, 6000 Kolding
-            </p>
+                </p>
         </address>
     </div>
     <div class="left-footer">
@@ -228,12 +246,11 @@
         <a href="#">Tilgænglighedserklæring</a>
         <a href="#">Spørgsmål & Svar</a>
         <a href="#">Om “IBA Specialister”</a>
-        <a href="#">Værktøjer & Software</a>
-        <a href="#">Superbrugere / Specialister</a>
+        <a href="#">Programmer og værktøjer</a>
+        <a href="#">Specialister / ekspert-bruger</a>
         <a href="#">Privatpolitik</a>
         <a href="#">Cookiepolitik</a>
     </div>
 </footer>
-
 </body>
 </html>

@@ -69,8 +69,12 @@ h6 {
     font-size: 16px;
 }
 
-a:hover {
-    box-shadow: 0 0 0 2px black
+a:hover:not(menu a):not(.menu-knap) {
+    box-shadow: 0 0 0 2px black;
+}
+
+menu a:hover {
+    text-decoration: underline;
 }
 
 .divider {
@@ -127,6 +131,8 @@ a:hover {
     font-size: 32px;    
 }
 
+
+
 /* Header CSS */
 
 header {
@@ -162,6 +168,84 @@ header {
 #logo-header {
     display: flex;
     justify-content: center;
+}
+
+/* Menu */
+.overlay {
+    display: block; /* Changed from none to block */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 998;
+    pointer-events: none;
+    transition: background-color 0.3s ease, pointer-events 0.3s ease;
+}
+
+.overlay.active {
+    background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: all;
+}
+
+menu {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 20%;
+    background-color: #10164A;
+    color: white;
+    padding: 8% 3% 3% 3%;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+}
+
+menu > a i {
+    font-size: 48px;
+    position: absolute;
+    top: 7%;
+    left: 14%;
+    text-decoration: none;
+}
+
+menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+menu.active {
+    display: block;
+    transform: translateY(0);
+}
+
+menu img {
+    width: 113px;
+    height: auto;
+    margin-bottom: 7%;
+}
+
+.menu-liste {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.menu-liste li {
+    margin: 10px 0;
+}
+
+.menu-liste a {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
 }
 
 /* Hero CSS */
@@ -604,7 +688,7 @@ li {
     border-radius: 30px;
     border: 2px solid black;
     background: linear-gradient(to right, #D9D9D9 0%, #D9D9D9 45%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%),
-                url('../img/AI\ Kursus\ billede.jpg') right center / cover no-repeat;
+                url('../img/left-ai.jpg') right center / cover no-repeat;
 }
 
 .kursus-info {
@@ -626,6 +710,9 @@ li {
     margin-bottom: 10%;;
 }
 
+.kursuser {
+    margin-bottom: 2%;
+}
 
 /* Media query for smaller screens */
 @media (max-width: 800px) {
@@ -665,6 +752,35 @@ li {
     header {
         padding: 0 24px;
     }
+
+
+/* Menu */
+menu {
+    width: 100%;
+    padding: 7% 5% 5% 5%;
+    text-align: center;
+}
+
+menu > a i {
+    position: absolute;
+    top: 7%;
+    left: 7%;
+}
+
+menu img {
+    margin: 0 auto 7% auto;
+    display: block;
+}
+
+.menu-liste {
+    align-items: center;
+    text-align: center;
+}
+
+.menu-liste li {
+    width: 100%;
+    text-align: center;
+}
 
 /* Hero */
 
