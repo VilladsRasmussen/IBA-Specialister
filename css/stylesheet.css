@@ -617,6 +617,7 @@ address a {
     display: flex;
     flex-wrap: wrap;
     gap: 2%;
+    margin-bottom: 2%;
 }
 
 .video-guide {
