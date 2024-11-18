@@ -55,7 +55,6 @@ h1 {
 
 h2 {
     font-size: 44px;
-    font-weight: bold;
 }
 
 h3 {
@@ -105,6 +104,7 @@ menu a:hover {
 
 .stor-cta-knap > p {
     font-size: 40px !important;   
+    margin: 0;
 }
 
 .stor-cta-knap > i {
@@ -217,6 +217,7 @@ menu {
     transform: translateY(-100%);
     display: flex;
     flex-direction: column;
+    visibility: hidden; /* Add this */
 }
 
 menu > a i {
@@ -235,7 +236,16 @@ menu a {
 
 menu.active {
     display: block;
+    visibility: visible; /* Menuen er synlig når den er aktiv */
     transform: translateY(0);
+}
+
+/* Når menuen er skjult, så alle elementer der før var fokuseret på, ikke længere bliver fokuseret gennem tab-funktionen */
+menu:not(.active) a {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+    tab-index: -1;
 }
 
 menu img {
@@ -312,7 +322,6 @@ menu img {
 
 .programmer-sektion h2 {
     margin-bottom: 1%;
-    font-weight: bold;
 }
 
 .programmer-showcase {
@@ -348,11 +357,14 @@ menu img {
     margin-bottom: 3%;
 }
 
+.individuel-program:hover {
+    box-shadow: 0 0 0 2px black;    
+}
+
 /* Specialister Sektion */
 
 .specialister-sektion h2 {
-    margin: 2% 0 3% 0;
-    font-weight: bold;
+    margin-bottom: 1%;
 }
 
 .specialister-showcase {
@@ -403,7 +415,10 @@ menu img {
     flex-direction: row;
     gap: 20px;
     justify-content: center;
+    margin-bottom: 6%;
 }
+
+
 
 .individuel-program-mellem img {
     aspect-ratio: 1/1; 
@@ -447,6 +462,11 @@ footer {
     left: 0;
     bottom: auto;
     margin-top: 3%;
+    z-index: -1;
+}
+
+footer section {
+    padding: 0;
 }
 
 footer p {
@@ -481,6 +501,7 @@ address a {
 /* --------------- ALLE PROGRAMMER / SPECIALISTER SIDE --------------- */
 
 .manglende-programmer-sektion {
+    margin-top: 3%;
     display: flex;
     justify-content: flex-start;
 }
@@ -492,10 +513,6 @@ address a {
     height: auto;
     padding: 3%;
     text-align: center;
-}
-
-.mangler-du h3 {
-    font-weight: bold;
 }
 
 .mangler-du p {
@@ -587,7 +604,7 @@ address a {
 /* Side Indhold */
 
 .side-indhold {
-    padding-top: 3%;
+    padding-top: 1%;
     display: flex;
     justify-content: space-between;
 }
@@ -597,7 +614,7 @@ address a {
 }
 
 .side-indhold h2, h4, p {
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 
 .side-indhold h5 {
@@ -637,7 +654,14 @@ iframe {
     height: 252px; 
 }
 
+.text-left h3 {
+    font-size: 24px;
+}
 /* Aside indhold */
+
+aside {
+    font-size: 20px !important;
+}
 
 aside article {
     display: flex;
@@ -690,10 +714,6 @@ aside > article h4 {
     padding: 1% 2%;
 }
 
-.text-left h5 {
-    margin-bottom: -1px;
-}
-
 .knap-og-logo img {
     aspect-ratio: 1/1;
     background-color: white;
@@ -725,7 +745,6 @@ aside > article h4 {
 
 .hjælp-specialister h2 {
     margin-bottom: 1%;
-    font-weight: bold;
 }
 
 .specifikke-specialister {
@@ -743,10 +762,6 @@ aside > article h4 {
     background-color: #D9D9D9;
     padding: 2%;
     border-radius: 20px;
-}
-
-.mini-specialist h3 {
-    font-weight: bold;
 }
 
 .mini-specialist p {
@@ -809,12 +824,24 @@ aside > article h4 {
         justify-content: center;
     }
 
+    main {
+        margin: 4%;
+    }
+
     h1 {
         font-size: 48px;
     }
 
     h2 {
         font-size: 36px;
+    }
+    
+    .stor-cta-knap > p {
+        font-size: 32px !important;   
+    }
+    
+    .mellem-cta-knap > p {
+        font-size: 28px !important;   
     }
 
 /* Header */
@@ -837,32 +864,32 @@ aside > article h4 {
 
 
 /* Menu */
-menu {
-    width: 100%;
-    padding: 7% 5% 5% 5%;
-    text-align: center;
-}
+    menu {
+        width: 100%;
+        padding: 7% 5% 5% 5%;
+        text-align: center;
+    }
 
-menu > a i {
-    position: absolute;
-    top: 7%;
-    left: 7%;
-}
+    menu > a i {
+        position: absolute;
+        top: 7%;
+        left: 7%;
+    }
 
-menu img {
-    margin: 0 auto 7% auto;
-    display: block;
-}
+    menu img {
+        margin: 0 auto 7% auto;
+        display: block;
+    }
 
-.menu-liste {
-    align-items: center;
-    text-align: center;
-}
+    .menu-liste {
+        align-items: center;
+        text-align: center;
+    }
 
-.menu-liste li {
-    width: 100%;
-    text-align: center;
-}
+    .menu-liste li {
+        width: 100%;
+        text-align: center;
+    }
 
 /* Hero */
 
@@ -876,16 +903,20 @@ menu img {
         text-align: center;
     }
 
+    .image-overlay {
+        padding: 10%;
+    }
+
 /* Programmer */
 
     .programmer-sektion h2 {
         text-align: center;
-        margin-bottom: 7%;
+        margin-bottom: 6%;
     }
 
     .programmer-showcase {
         justify-content: center;
-        margin-bottom: 7%;
+        margin-bottom: 6%;
     }
 
     .negative-margin {
@@ -905,6 +936,34 @@ menu img {
         display: none;
     }
 
+    .genveje-hero {
+        width: auto;
+    }
+
+    .filrering-knapper {
+        flex-direction: column;
+    }
+
+    .filrering-knapper a {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    .programmer-sektion.hidden {
+        display: none;
+    }
+
+    .manglende-programmer-sektion {
+        margin-top: 10%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mangler-du {
+        width: 100%;
+        padding: 5%;;
+    }
+
 /* Specialister */
 
     .specialister-sektion h2 {
@@ -920,7 +979,7 @@ menu img {
         margin-bottom: 10%;
     }
 
-    .albert {
+    .hidden {
         display: none;
     }
 
@@ -935,35 +994,32 @@ menu img {
         padding-bottom: -1%;
     }
 
+/* PROGRAM / SPECIALIST SIDE */
 
-/* ALLE PROGRAMMER SIDE */ 
-
-    .manglende-programmer-sektion {
-        margin-top: 500px;
-    }
-    
-    .mangler-du {
-        width: 100%;
-        padding: 10%;
-    }
-
-/* PROGRAM SIDE */
-
-    .program-hero {
-        padding: 6%;
+    .program-hero, .specialist-hero {
+        padding: 8%;
     }
 
     .billede-og-info {
         flex-direction: column-reverse;
+        margin-top: -5%;
+    }
+
+    .billede-og-info h1 {
+        text-align: start;
     }
 
     .program-logo {
         width: 150px;
+        margin-top: 3%;
+    }
+
+    .beskrivelse {
+        margin-bottom: 5%;
     }
 
     .sektion-genveje {
         flex-direction: column;
-        width: 75%;
     }
 
     .forced-margin {
@@ -973,6 +1029,10 @@ menu img {
     .side-indhold {
         flex-direction: column;
         width: 100%;
+    }
+
+    .side-indhold h2 {
+       margin-bottom: 3%;
     }
 
     .videoguides {
@@ -1014,9 +1074,17 @@ menu img {
         flex-direction: column;
     }
     
+    .text-left h3 {
+        font-size: 24px;
+    }
+
     .knap-og-logo {
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 4%;        
+    }
+
+    .knap-og-logo a {
+        margin-bottom: 0 !important;
     }
 
     .knap-og-logo img {
@@ -1024,8 +1092,14 @@ menu img {
         height: 100%;
     }
 
+    .specialist-guide {
+        padding: 6%;
+        margin-bottom: 5% !important;
+    }
+
     .gode-programmer {
         margin-top: 10%;
+        justify-content: space-evenly;
     }
 
     .online-kursus {
@@ -1038,6 +1112,10 @@ menu img {
 
     .kursus-info {
         margin-bottom: 70%;
+    }
+
+    .venstre-indhold, .venstre-indhold-specialister {
+        padding-right: 0;
     }
 
 }

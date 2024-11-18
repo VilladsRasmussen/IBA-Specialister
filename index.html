@@ -14,7 +14,7 @@
 
 <!-- Header der skal være på alle sider -->
 
-<header class="sticky-header">
+<header>
     <nav class="par-knapper">
         <a href="#menu" class="menu-knap"> 
             <p class="header-text">Menu</p>
@@ -25,11 +25,11 @@
             <i class="fa-solid fa-house"></i>
         </a>
     </nav>
-    <div id="logo-header">
+    <nav id="logo-header">
         <a href="index.html">
             <img src="img/IBA Specialister.png" alt="Billede af et logo med navn IBA Specialister">
         </a>
-    </div>
+    </nav>
     <nav class="par-knapper knapper-right">
         <a href="error.html" class="menu-knap">
             <p class="header-text">Log Ind</p>
@@ -153,66 +153,102 @@
             <img class="medarbejder" src="img/medarbejdere/luise_steenholdt.jpg" alt="Luise Lindt Steenholdt">
             <h3><strong>Luise Lind Steenholdt</strong></h3>
             <p>Multimediedesigner</p>
-            <p><strong>Hun bruger:</strong></p>
-            <div class="programmer-for-specialister">
-                <a href="program-chatgpt.html" class="individuel-program-mellem">
-                    <figure>
-                        <img src="img/programmer/ChatGPT_800x800.png" alt="ChatGPT">
-                        <figcaption><strong>ChatGPT</strong></figcaption>
-                    </figure>
-                </a>
-                <a href="#" class="individuel-program-mellem">
-                    <figure>
-                        <img src="img/programmer/Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator">
-                        <figcaption><strong>Illustrator</strong></figcaption>
-                    </figure>
+            <div class="specialist-knapper">
+                <p><strong>Hun bruger:</strong></p>
+                <div class="programmer-for-specialister">
+                    <a href="program-chatgpt.html" class="individuel-program-mellem">
+                        <figure>
+                            <img src="img/programmer/ChatGPT_800x800.png" alt="ChatGPT">
+                            <figcaption><strong>ChatGPT</strong></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="individuel-program-mellem">
+                        <figure>
+                            <img src="img/programmer/Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator">
+                            <figcaption><strong>Illustrator</strong></figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <a href="specialist-luise.html" class="mellem-cta-knap">
+                    <p>Læs mere om dem</p>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
-            <a href="specialist-luise.html" class="mellem-cta-knap">
-                <p>Læs mere om dem</p>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
         </article>
+
         <article class="individuel-specialist">
             <img class="medarbejder" src="img/medarbejdere/allan-fledelius.jpg" alt="Allan Fledelius">
             <h3><strong>Allan Fledelius</strong></h3>
             <p>Marketing</p>
-            <p><strong>Han bruger:</strong></p>
-            <div class="programmer-for-specialister">
-                <a href="#" class="individuel-program-mellem">
-                    <img src="img/programmer/Microsoft_Office_Word_(2019–present).svg.png" alt="Word">
-                    <p><strong>Word</strong></p>
+            <div class="specialist-knapper">
+                <p><strong>Han bruger:</strong></p>
+                <div class="programmer-for-specialister">
+                    <a href="#" class="individuel-program-mellem">
+                        <img src="img/programmer/Microsoft_Office_Word_(2019–present).svg.png" alt="Word">
+                        <p><strong>Word</strong></p>
+                    </a>
+                </div>
+                <a href="#" class="mellem-cta-knap">
+                    <p>Læs mere om dem</p>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
-            <a href="#" class="mellem-cta-knap">
-                <p>Læs mere om dem</p>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
         </article>
-        <article class="individuel-specialist albert">
+
+        <article class="individuel-specialist hidden">
             <img class="medarbejder" src="img/medarbejdere/albert_garland.jpg" alt="Albert Garland Elam">
             <h3><strong>Albert Garland Elam</strong></h3>
             <p>Lektor</p>
-            <p><strong>Han bruger:</strong></p>
-            <div class="programmer-for-specialister">
-                <a href="#" class="individuel-program-mellem">
-                    <figure>
-                        <img src="img/programmer/Microsoft_Office_Excel_(2019–present).svg.png" alt="Excel">
-                        <figcaption><strong>Excel</strong></figcaption>
-                    </figure>
-                </a>
-                <a href="#" class="individuel-program-mellem">
-                    <figure>
-                        <img src="img/programmer/Microsoft_Office_PowerPoint_Logo_512px.png" alt="PowerPoint">
-                        <figcaption><strong>PowerPoint</strong></figcaption>
-                    </figure>
+            <div class="specialist-knapper">
+                <p><strong>Han bruger:</strong></p>
+                <div class="programmer-for-specialister">
+                    <a href="#" class="individuel-program-mellem">
+                        <figure>
+                            <img src="img/programmer/Microsoft_Office_Excel_(2019–present).svg.png" alt="Excel">
+                            <figcaption><strong>Excel</strong></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="individuel-program-mellem">
+                        <figure>
+                            <img src="img/programmer/Microsoft_Office_PowerPoint_Logo_512px.png" alt="PowerPoint">
+                            <figcaption><strong>PowerPoint</strong></figcaption>
+                        </figure>
+                    </a>
+                </div>
+                <a href="#" class="mellem-cta-knap">
+                    <p>Læs mere om dem</p>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
-            <a href="#" class="mellem-cta-knap">
-                <p>Læs mere om dem</p>
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
         </article>
+
+        <article class="individuel-specialist hidden">
+            <img class="medarbejder" src="img/medarbejdere/nicolai-svensson.jpg" alt="Nikolaj Svensson">
+            <h3>Nikolaj Svensson</h3>
+            <p>Markedsføringsøkonom</p>
+            <div class="specialist-knapper">
+                <p><strong>Han bruger:</strong></p>
+                <nav class="programmer-for-specialister">
+                    <a href="#" class="individuel-program-mellem">
+                        <figure>
+                            <img src="img/programmer/Microsoft_Office_PowerPoint_Logo_512px.png" alt="PowerPoint">
+                            <figcaption><strong>PowerPoint</strong></figcaption>
+                        </figure>
+                    </a>
+                    <a href="#" class="individuel-program-mellem">
+                        <figure>
+                            <img src="img/programmer/download.png" alt="Canvas">
+                            <figcaption><strong>Canvas</strong></figcaption>
+                        </figure>
+                    </a>
+                </nav>
+                <a href="#" class="mellem-cta-knap">
+                    <p>Læs mere om dem</p>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </article>
+
     </div>
     <a href="alle-specialister.html" class="stor-cta-knap">
         <p>Se alle specialister her</p>
@@ -266,4 +302,5 @@
 </div> <!-- content-wrapper -->
 
 </body>
-</html>
+</html> 
+
