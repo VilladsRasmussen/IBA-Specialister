@@ -73,6 +73,10 @@ h6 {
     font-size: 16px;
 }
 
+a:hover:not(menu a):not(.menu-knap) {
+    box-shadow: 0 0 0 2px black;
+}
+
 menu a:hover {
     text-decoration: underline;
 }
@@ -241,7 +245,6 @@ menu:not(.active) a {
     display: none;
     visibility: hidden;
     pointer-events: none;
-    tab-index: -1;
 }
 
 menu img {
