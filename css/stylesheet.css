@@ -73,10 +73,6 @@ h6 {
     font-size: 16px;
 }
 
-a:hover:not(menu a):not(.menu-knap) {
-    box-shadow: 0 0 0 2px black;
-}
-
 menu a:hover {
     text-decoration: underline;
 }
@@ -481,6 +477,7 @@ footer a {
 
 footer a:hover {
     color: #DBB630;
+    border: none;
 }
 
 .logo-footer {
