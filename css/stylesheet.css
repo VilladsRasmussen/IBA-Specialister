@@ -40,7 +40,7 @@ a:visited figcaption {
 
 figcaption {
     text-align: center;
-    font-size: 28px;
+    font-size: 20px;
     color: black;
     text-decoration: none;
 }
@@ -770,6 +770,7 @@ aside > article h4 {
 .mini-specialist {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 33%;
     text-align: center;
