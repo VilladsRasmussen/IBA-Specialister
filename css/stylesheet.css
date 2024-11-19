@@ -40,7 +40,7 @@ a:visited figcaption {
 
 figcaption {
     text-align: center;
-    font-size: 22px;
+    font-size: 28px;
     color: black;
     text-decoration: none;
 }
@@ -157,6 +157,10 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+}
+
+header p {
+    margin: 0;
 }
 
 .par-knapper { /* Knapperne skal være lige for hinanden */
