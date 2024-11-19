@@ -825,7 +825,7 @@ aside > article h4 {
     margin-bottom: 1%;
 }
 
-/* Media query for smaller screens */
+/* Media query for mindre skærme */
 @media (max-width: 800px) {
 
     * {
