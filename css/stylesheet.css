@@ -72,7 +72,7 @@ h6 {
     font-size: 16px;
 }
 
-a:hover:not(menu a):not(.menu-knap) {
+a:hover:not(menu a):not(.header-knap) {
     box-shadow: 0 0 0 2px black;
 }
 
@@ -161,10 +161,10 @@ header {
 .par-knapper { /* Knapperne skal være lige for hinanden */
     display: flex;
     gap: 42px;
-    width: 25%;
+    width: 15%;
 }
 
-.menu-knap {
+.header-knap {
     color: white;
     font-size: 24px;
     display: flex;
