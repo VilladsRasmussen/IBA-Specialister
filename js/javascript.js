@@ -9,17 +9,22 @@ menuButton.addEventListener('click', function(e) {
 });
 
 // Lukker menu, ved at klikke på krydset (ikonet med classen fa-x)
-const closeButton = document.querySelector('menu > a > i.fa-x');
-closeButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    menu.classList.remove('active'); // Fjerner klassen active fra menuen, hvilket gør at menuen skjules
-    overlay.classList.remove('active');
-});
+const closeButton = document.querySelector('#menu .close-menu-button'); // Vælger luk-knappen i menuen
+if (closeButton) {
+    closeButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        menu.classList.remove('active'); // Fjerner klassen active fra menuen, hvilket gør at menuen skjules
+        overlay.classList.remove('active');
+    });
+}
 
 overlay.addEventListener('click', function() {
     menu.classList.remove('active');
     overlay.classList.remove('active');
 });
+
+
+
 
 // Filter funktion til at vise og skjule sektioner
 document.addEventListener('DOMContentLoaded', function() { // Vent til DOM er loaded (resten af siden er loaded, før vi kører koden)
